@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your BTS Result</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+    background: #ede7f6;
+    padding: 40px;
+}
+
+img{
+    width: 230px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="resultText"></h1>
+<img id="resultImage">
+
+<script>
+
+let params = new URLSearchParams(window.location.search);
+
+let name = params.get("name");
+let interest = params.get("interest");
+
+let member="";
+let image="";
+
+if(interest==="leader"){
+member="RM 💜";
+image="images/rm.jpg";
+}
+
+else if(interest==="dance"){
+member="J-Hope 💜";
+image="images/jhope.jpg";
+}
+
+else if(interest==="sing"){
+member="Jungkook 💜";
+image="images/jk.jpg";
+}
+
+else if(interest==="fashion"){
+member="V 💜";
+image="images/v.jpg";
+}
+
+else if(interest==="fun"){
+member="Jin 💜";
+image="images/jin.jpg";
+}
+
+else if(interest==="art"){
+member="Jimin 💜";
+image="images/jimin.jpg";
+}
+
+else if(interest==="calm"){
+member="Suga 💜";
+image="images/suga.jpg";
+}
+
+document.getElementById("resultText").innerHTML =
+"Hello "+name+" 💜 You are like "+member;
+
+document.getElementById("resultImage").src = image;
+
+</script>
+
+</body>
+</html>

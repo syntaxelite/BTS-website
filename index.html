@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BTS Personality Test</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: #f3e5f5;
+    text-align: center;
+    padding: 40px;
+}
+
+input, select, button{
+    padding: 12px;
+    margin: 10px;
+    width: 230px;
+}
+
+button{
+    background: purple;
+    color: white;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💜 Which BTS Member Are You?</h1>
+
+<input type="text" id="name" placeholder="Enter your name"><br>
+
+<input type="number" id="age" placeholder="Enter your age"><br>
+
+<select id="gender">
+<option value="">Select Gender</option>
+<option>Female</option>
+<option>Male</option>
+<option>Other</option>
+</select><br>
+
+<select id="interest">
+<option value="">Select Interest</option>
+<option value="leader">Leadership</option>
+<option value="dance">Dance</option>
+<option value="sing">Singing</option>
+<option value="fashion">Fashion</option>
+<option value="fun">Fun</option>
+<option value="art">Art</option>
+<option value="calm">Calm</option>
+</select><br>
+
+<button onclick="goResult()">Find My BTS Member 💜</button>
+
+<script>
+function goResult(){
+
+let name = document.getElementById("name").value;
+let interest = document.getElementById("interest").value;
+
+if(name==="" || interest===""){
+alert("Fill all details!");
+return;
+}
+
+window.location.href =
+"result.html?name="+name+"&interest="+interest;
+}
+</script>
+
+</body>
+</html>
